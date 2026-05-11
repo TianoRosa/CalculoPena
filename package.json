@@ -1,0 +1,14 @@
+{
+  "name": "calculo-pena",
+  "version": "1.0.0",
+  "description": "Calculadora de Execução Penal – Rosa Advogados",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

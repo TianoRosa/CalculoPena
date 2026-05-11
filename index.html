@@ -426,6 +426,10 @@ const $ = id => document.getElementById(id);
 const val = id => $( id )?.value ?? '';
 const num = id => parseInt(val(id)) || 0;
 
+function escapeHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
 function toDays(a, m, d){ return (parseInt(a)||0)*365 + (parseInt(m)||0)*30 + (parseInt(d)||0); }
 
 function fmt(totalDias) {
@@ -596,9 +600,9 @@ function calc() {
   $('empty-state').style.display = 'none';
   $('r-content').style.display = '';
 
-  const nome    = val('nome').trim();
-  const proc    = val('proc').trim();
-  const vara    = val('vara').trim();
+  const nome    = escapeHtml(val('nome').trim());
+  const proc    = escapeHtml(val('proc').trim());
+  const vara    = escapeHtml(val('vara').trim());
   const dtFato  = val('dt-fato');
   const regime  = val('regime');
   const nat     = val('nat');
@@ -606,7 +610,7 @@ function calc() {
   const dtIni   = val('dt-ini');
   const detr    = num('detr');
   const remic   = num('remic');
-  const obs     = val('obs').trim();
+  const obs     = escapeHtml(val('obs').trim());
 
   const faltaD  = totalFaltaDias();
 

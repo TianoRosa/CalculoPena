@@ -1,4 +1,4 @@
-# ⚖ Calculadora de Execução Penal
+# ⚖ Cris Hub
 
 **Rosa Advogados · OAB/RS 78.652**  
 Desenvolvido por Cristiano da Rosa — Advogado Criminalista
